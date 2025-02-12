@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
+import { Linkedin } from 'lucide-react';
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -30,15 +31,33 @@ const Index = () => {
     contactRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com/company/supreme-group', '_blank');
+  };
+
   return (
     <div className="min-h-screen">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div></div>
+          <img 
+            src="/lovable-uploads/bde386f1-5984-441b-8b4b-cb1fe97813c9.png" 
+            alt="Supreme Group Logo" 
+            className="h-8 md:h-10"
+          />
           <div className="flex items-center gap-6">
-            <button onClick={scrollToContact} className="bg-[#00A3E0] text-white px-6 py-2 rounded-full hover:bg-[#0087B8] transition-colors">
+            <button 
+              onClick={scrollToContact} 
+              className="bg-[#00A3E0] text-white px-6 py-2 rounded-full hover:bg-[#0087B8] transition-colors"
+            >
               Contact Us
+            </button>
+            <button 
+              onClick={openLinkedIn}
+              className="text-[#0A66C2] hover:text-[#084d91] transition-colors"
+              aria-label="Visit our LinkedIn page"
+            >
+              <Linkedin size={24} />
             </button>
           </div>
         </div>
