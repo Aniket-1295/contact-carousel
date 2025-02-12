@@ -35,7 +35,7 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <img src="/lovable-uploads/54f46287-d75b-418f-99c4-d04eea8dc26f.png" alt="Logo" className="h-8" />
+          <div></div>
           <div className="flex items-center gap-6">
             <button onClick={scrollToContact} className="bg-[#00A3E0] text-white px-6 py-2 rounded-full hover:bg-[#0087B8] transition-colors">
               Contact Us
