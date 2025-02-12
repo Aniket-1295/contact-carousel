@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { Linkedin } from 'lucide-react';
+import LogoImage from "../pages/Layer 1.png";
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -41,7 +42,7 @@ const Index = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <img 
-            src="/lovable-uploads/54f46287-d75b-418f-99c4-d04eea8dc26f.png" 
+            src={LogoImage} 
             alt="Supreme Group Logo" 
             className="h-10 md:h-12 object-contain"
           />
